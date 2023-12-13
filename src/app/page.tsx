@@ -27,45 +27,122 @@ export default function HomePage() {
       <Head>
         <title>Hi</title>
       </Head>
-      <section className='bg-white'>
-        <div className='layout relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
-          <Logo className='w-16' />
-          <h1 className='mt-4'>Next.js + Tailwind CSS + TypeScript Starter</h1>
-          <p className='mt-2 text-sm text-gray-800'>
-            A starter for Next.js, Tailwind CSS, and TypeScript with Absolute
-            Import, Seo, Link component, pre-configured with Husky{' '}
-          </p>
-          <p className='mt-2 text-sm text-gray-700'>
-            <ArrowLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
-              See the repository
-            </ArrowLink>
-          </p>
-
-          <ButtonLink className='mt-6' href='/components' variant='light'>
-            See all components
-          </ButtonLink>
-
-          <UnstyledLink
-            href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter'
-            className='mt-4'
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              width='92'
-              height='32'
-              src='https://vercel.com/button'
-              alt='Deploy with Vercel'
-            />
-          </UnstyledLink>
-
-          <footer className='absolute bottom-2 text-gray-700'>
-            © {new Date().getFullYear()} By{' '}
-            <UnderlineLink href='https://theodorusclarence.com?ref=tsnextstarter'>
-              Theodorus Clarence
-            </UnderlineLink>
-          </footer>
+      <div className='flex min-h-screen flex-row items-center justify-center'>
+        {/* Sidebar project navigation */}
+        <div className='h-screen w-1/4 min-w-[300px] overflow-y-scroll'>
+          <div className='flex h-full flex-col justify-start'>
+            <div className='mb-16 flex min-h-[200px] w-full flex-col justify-end border-b-[1px] border-b-black'>
+              <div className='mt-4 w-16 p-2'>
+                <Logo />
+              </div>
+            </div>
+            <ul className='mb-16 flex w-full flex-col items-start justify-start border-t-[1px] border-t-black'>
+              <li className='flex h-6 w-full flex-row items-center justify-start border-b-[1px] border-b-black py-2 pl-2 font-light tracking-tighter text-black'>
+                <span className='text-xs font-black italic'>... INDEX</span>
+              </li>
+              <UnstyledLink href='/about' className='w-full'>
+                <li className='flex h-6 flex-row items-center justify-start border-b-[1px] border-b-black py-2 pl-2 font-light tracking-tighter text-black hover:bg-black hover:text-white'>
+                  <span className='mr-1 block text-xs text-neutral-400'>
+                    2024
+                  </span>
+                  <span className='text-xs'>TimeCurve®App</span>
+                </li>
+              </UnstyledLink>
+              <UnstyledLink href='/about' className='w-full'>
+                <li className='flex h-6 flex-row items-center justify-start border-b-[1px] border-b-black py-2 pl-2 font-light tracking-tighter text-black hover:bg-black hover:text-white'>
+                  <span className='mr-1 block text-xs text-neutral-400'>
+                    2023
+                  </span>
+                  <span className='text-xs'>Antel Display</span>
+                </li>
+              </UnstyledLink>
+              <UnstyledLink href='/about' className='w-full'>
+                <li className='flex h-6 flex-row items-center justify-start border-b-[1px] border-b-black py-2 pl-2 font-light tracking-tighter text-black hover:bg-black hover:text-white'>
+                  <span className='mr-1 block text-xs text-neutral-400'>
+                    2023
+                  </span>
+                  <span className='text-xs'>Sterile Romantik</span>
+                </li>
+              </UnstyledLink>
+              <UnstyledLink href='/about' className='w-full'>
+                <li className='flex h-6 flex-row items-center justify-start border-b-[1px] border-b-black py-2 pl-2 font-light tracking-tighter text-black hover:bg-black hover:text-white'>
+                  <span className='mr-1 block text-xs text-neutral-400'>
+                    2022
+                  </span>
+                  <span className='text-xs'>Outlet Storefront</span>
+                </li>
+              </UnstyledLink>
+              <UnstyledLink href='/about' className='w-full'>
+                <li className='flex h-6 flex-row items-center justify-start border-b-[1px] border-b-black py-2 pl-2 font-light tracking-tighter text-black hover:bg-black hover:text-white'>
+                  <span className='mr-1 block text-xs text-neutral-400'>
+                    2022
+                  </span>
+                  <span className='text-xs'>Galeria Kollektiva</span>
+                </li>
+              </UnstyledLink>
+              <UnstyledLink href='/about' className='w-full'>
+                <li className='flex h-6 flex-row items-center justify-start border-b-[1px] border-b-black py-2 pl-2 font-light tracking-tighter text-black hover:bg-black hover:text-white'>
+                  <span className='mr-1 block text-xs text-neutral-400'>
+                    2021
+                  </span>
+                  <span className='text-xs'>myHEALFRORM</span>
+                </li>
+              </UnstyledLink>
+              <UnstyledLink href='/about' className='w-full'>
+                <li className='flex h-6 flex-row items-center justify-start border-b-[1px] border-b-black py-2 pl-2 font-light tracking-tighter text-black hover:bg-black hover:text-white'>
+                  <span className='mr-1 block text-xs text-neutral-400'>
+                    2021
+                  </span>
+                  <span className='text-xs'>Radio Rasclat • OFCR</span>
+                </li>
+              </UnstyledLink>
+            </ul>
+            <ul className='mb-16 flex w-full flex-col items-start justify-start border-t-[1px] border-t-black'>
+              <li className='flex h-6 w-full flex-row items-center justify-start border-b-[1px] border-b-black py-2 pl-2 font-light tracking-tighter text-black'>
+                <span className='text-xs font-black italic'>... Websites</span>
+              </li>
+              <UnstyledLink href='/about' className='w-full'>
+                <li className='flex h-6 flex-row items-center justify-start border-b-[1px] border-b-black py-2 pl-2 font-light tracking-tighter text-black hover:bg-black hover:text-white'>
+                  <span className='text-xs'>Dücker Medizintechnik</span>
+                </li>
+              </UnstyledLink>
+            </ul>
+            <div className='mb-16 flex w-full flex-col items-start justify-center'>
+              <div className='p-2 text-xs font-light tracking-tighter'>
+                As a web developer and designer, my work often results in
+                cross-media solutions. I tend to mix the media's typical
+                practices with cutting-edge digital processing techniques.
+              </div>
+              <div className='p-2 text-xs font-light tracking-tighter'>
+                Don’t hesitate to contact:
+                <br />
+                Domenik Toefflinger
+                <br />
+                e: dmnktoe[at]gmail.com
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
+        {/* Main content */}
+        <div className='flex h-screen w-full flex-col items-center justify-start'>
+          <div className='mb-16 flex min-h-[200px] w-full flex-col justify-end border-b-[1px] border-b-black'>
+            {/* -90deg rotated navigation bar items */}
+          </div>
+          <h1 className='text-4xl font-bold text-gray-800'>Hi</h1>
+          <p className='mt-2 text-sm text-gray-500'>
+            Welcome to your Next.js Starter
+          </p>
+        </div>
+        {/* Sidebar stories */}
+        <div className='h-screen w-1/4 bg-gray-50'>
+          <div className='mt-8 flex flex-col items-center justify-center'>
+            <ButtonLink href='/about'>About</ButtonLink>
+            <ArrowLink href='/about'>About</ArrowLink>
+            <UnderlineLink href='/about'>About</UnderlineLink>
+            <UnstyledLink href='/about'>About</UnstyledLink>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
